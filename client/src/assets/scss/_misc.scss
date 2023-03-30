@@ -1,0 +1,49 @@
+@import 'colors';
+@import 'variables';
+
+%buttonStyle {
+    border: 1px solid $gray-100;
+    outline: none;
+    border-radius: $border-rounded-1;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: $gray-100;
+    transition: $quick-transition;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gray-200;
+    }
+
+    &:focus {
+        border: {
+            color: $main-color
+        }
+    }
+}
+
+%inputStyle {
+    padding: 5px 10px;
+    border-radius: $border-rounded-1;
+    border: 1px solid $gray-200;
+    outline: none;
+    transition: $quick-transition;
+
+    &:focus {
+        border-color: $main-color;
+    }
+}
+
+%nonBorderButton {
+    background-color: transparent;
+    border: none;
+}
+
+.hidden-dock {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}

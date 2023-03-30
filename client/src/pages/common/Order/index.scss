@@ -1,0 +1,98 @@
+.order-informations {
+
+    .suggestion-address {
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 2px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        box-shadow: 1px 1px 3px 1px #eee;
+
+        .location-item {
+            padding: 5px 10px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .location-item:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    .field-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        input,
+        select {
+            padding: 5px;
+            border: 1px solid #f1f1f1;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            max-width: 600px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        select {
+            width: fit-content;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #B0B435;
+        }
+    }
+
+
+}
+
+.order-detail-wrapper {
+    ul.order-detail-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            display: grid;
+            grid-template-columns: 80px auto;
+            margin: 10px 0;
+
+            img {
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+button.create-order {
+    border: 0;
+    width: max-content;
+    padding: 10px 15px;
+    background-color: white;
+    color: #B0B435;
+    cursor: pointer;
+}
+
+.suggestion-wrapper {
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    max-width: 600px;
+    box-shadow: 0px 0px 5px 1px #eee;
+
+    .suggestion-item {
+        cursor: pointer;
+        transition: all .3s;
+        margin: 10px;
+    }
+
+    .suggestion-item:hover {
+        color: #B0B435;
+    }
+}

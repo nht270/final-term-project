@@ -1,0 +1,111 @@
+.slideshow-container {
+    height: 500px;
+    position: relative;
+    color: white;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    .slideshow {
+        width: 100%;
+        height: 500px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        .slider {
+            width: 300%;
+            height: 100%;
+            display: flex;
+
+            .slide {
+                height: inherit;
+                width: 100%;
+                flex-basis: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                scroll-snap-align: center;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    object-fit: cover;
+                }
+            }
+        }
+
+
+    }
+
+    .slideshow::-webkit-scrollbar {
+        display: none;
+    }
+
+    .indexs {
+        background-color: transparent;
+        position: absolute;
+        width: fit-content;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            margin: 0 10px;
+            background-color: white;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .dot.selected {
+            width: 9px;
+            height: 9px;
+            border: 2px solid white;
+            background-color: transparent;
+        }
+    }
+
+    .autoplay-control * {
+        width: 15px;
+        height: auto;
+    }
+
+    .autoplay-control {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    .previous-control,
+    .next-control {
+        position: absolute;
+        top: calc((100% - 100px)/2);
+        height: 100px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next-control {
+        right: 0;
+    }
+
+    .previous-control:hover,
+    .next-control:hover {
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+}

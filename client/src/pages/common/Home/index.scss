@@ -1,0 +1,16 @@
+.content>.title {
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.align-center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

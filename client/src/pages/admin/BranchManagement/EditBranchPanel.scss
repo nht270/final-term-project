@@ -1,0 +1,140 @@
+.edit-branch-panel {
+    label {
+        font-size: large;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    input[type="text"],
+    input[type="time"] {
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+        max-width: 600px;
+    }
+
+    input[type="text"],
+    input[type="time"] {
+        height: 30px;
+    }
+
+    input[type="text"]:focus,
+    input[type="time"]:focus {
+        border-color: #B0B435;
+    }
+
+    .branch-name-wrapper,
+    .branch-phone-wrapper,
+    .branch-address-wrapper,
+    .branch-address-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-evenly;
+        height: 70px;
+    }
+
+    .branch-time-wrapper {
+        height: 70px;
+
+        input {
+            margin: 0 10px;
+        }
+    }
+
+    button.update,
+    a.back,
+    a.delete {
+        text-align: center;
+        padding: 5px 25px;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+        transition: all .2s;
+        margin: 20px 10px;
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 3px;
+        box-sizing: border-box;
+        height: 35px;
+    }
+
+    button.update {
+        color: #B0B435;
+    }
+
+    a.back {
+        color: #B0B4ff;
+    }
+
+    button.update:hover,
+    a.back:hover {
+        background-color: black;
+    }
+
+    a.delete:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .warning-wrapper {
+        min-height: 100px;
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            padding: 20px 15px;
+            flex-grow: 1;
+        }
+
+        hr {
+            width: 100%;
+            background-color: #dbdbdb;
+            border: 0;
+            height: 1px;
+            margin: 0;
+        }
+
+        button.ok {
+            border: none;
+            background-color: white;
+            padding: 12px 0;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 0 0 12px 12px;
+            color: #e53e3e;
+            cursor: pointer;
+        }
+    }
+
+    .branch-address-wrapper {
+        position: relative;
+
+        .suggestion-address {
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 2px;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            box-shadow: 1px 1px 3px 1px #eee;
+
+            .location-item {
+                padding: 5px 10px;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            .location-item:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

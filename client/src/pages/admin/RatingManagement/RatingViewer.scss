@@ -1,0 +1,96 @@
+.tool-bar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+
+    .status-bar {
+        display: flex;
+        gap: 1rem;
+        margin: .5rem;
+
+        button.status-button {
+            border: none;
+            width: fit-content;
+            background-color: transparent;
+            border-radius: .5rem;
+            padding: 8px 8px 7px;
+            background-color: #0000000d;
+            color: #0f0f0f;
+            cursor: pointer;
+
+            &.selected {
+                background-color: #0f0f0f;
+                color: white;
+            }
+        }
+    }
+
+    input[type="search"],
+    input[type="date"],
+    select {
+        border: 1px solid #f1f1f1;
+        border-radius: .4rem;
+        padding: .4rem;
+        height: 30px;
+        outline: none;
+        box-sizing: border-box;
+
+        &:focus {
+            border-color: #B0B435;
+        }
+    }
+
+    .search-bar {
+        display: flex;
+
+        button.search-icon {
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e1e1e1;
+            color: #333;
+            background-color: white;
+            border-radius: 8px;
+            cursor: pointer;
+
+            svg {
+                height: 18px;
+                width: auto;
+            }
+        }
+    }
+
+    .date-range {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+button.sort-label {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+
+    svg {
+        height: 18px;
+        width: auto;
+    }
+}
+
+.sort-panel {
+    width: max-content;
+    background-color: #0f0f0f;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+}

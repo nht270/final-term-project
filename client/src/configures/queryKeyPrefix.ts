@@ -1,0 +1,28 @@
+class QueryKeyPrefix {
+    static GET_USER_INFORMATION_PREFIX = 'get-user-information'
+    static GET_STAFF_INFORMATION_PREFIX = 'get-staff-information'
+    static GET_ADMIN_INFORMATION_PREFIX = 'get-admin-information'
+    static GET_ORDERS_PREFIX = 'get-orders'
+    static GET_ORDER_PREFIX = 'get-order'
+    static GET_RATINGS_PREFIX = 'get-ratings'
+    static GET_RATING_PREFIX = 'get-rating'
+    static GET_BRANCHES_PREFIX = 'get-branches'
+    static GET_BRANCH_PREFIX = 'get-branch'
+    static GET_BANNERS_PREFIX = 'get-banners'
+    static GET_BANNER_PREFIX = 'get-banner'
+    static GET_NEWS_LIST_PREFIX = 'get-news-list'
+    static GET_NEWS_PREFIX = 'get-news'
+    static GET_COUPONS_PREFIX = 'get-coupons'
+    static GET_COUPON_PREFIX = 'get-coupon'
+    static GET_PROMOTIONS = 'get-promotions'
+    static GET_PROMOTION = 'get-promotion'
+    static GET_PRODUCTS = 'get-products'
+    static GET_PRODUCT = 'get-product'
+    static GET_CATEGORIES = 'get-categories'
+    static GET_CATEGORY = 'get-category'
+    static SEARCH_PRODUCT_PREFIX = 'search-products'
+    static SEARCH_ADDRESS_PREFIX = 'search-address'
+    static GET_CART = 'get-cart'
+}
+
+export default QueryKeyPrefix

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        .row {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .row .toggle {
+            height: 20px;
+            width: 40px;
+            position: relative;
+        }
+
+        .row .toggle input[type="checkbox"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #929292;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all .1s;
+        }
+
+        .row .toggle input[type="checkbox"]:hover {
+            border-color: #6B6B6B;
+        }
+
+        .row .toggle input[type="checkbox"]:checked {
+            background-color: #0078D4;
+            border-color: #0078D4;
+        }
+
+        .row .toggle input[type="checkbox"]+label {
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #2B2B2B;
+            border-radius: 20px;
+            left: 5px;
+            top: 5px;
+            transition: all .3s;
+        }
+
+        .row .toggle input[type="checkbox"]:checked+label {
+            background-color: white;
+            left: 25px;
+        }
+
+        .searchable-select-box {
+            width: fit-content;
+            height: 25px;
+        }
+
+        .searchable-select-box button.select-box-label {
+            width: 200px;
+            border: 1px solid #ccc;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+
+
+
+        .searchable-select-box button.select-box-label~* {
+            /* display: none; */
+        }
+
+        .searchable-select-box button.select-box-label:focus~* {
+            /* display: block; */
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 600px; margin: 20% auto;">
+        <!-- <div class="row">
+            <span>Turn it up</span>
+            <div class="toggle">
+                <input type="checkbox" id="chk-1">
+                <label for="chk-1"></label>
+            </div>
+        </div> -->
+
+        <!-- <div class="searchable-select-box">
+            <button class="select-box-label">
+                <span class="text">Choose item! </span>
+                <span class="icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="c011064" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.85 7.65c.2.2.2.5 0 .7l-5.46 5.49a.55.55 0 01-.78 0L4.15 8.35a.5.5 0 01.7-.7L10 12.8l5.15-5.16c.2-.2.5-.2.7 0z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+
+            <input type="search" name="search-box" id="search-1">
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+            </ul>
+        </div> -->
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/colors';
+
+.viewer-panel {
+    gap: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 3px;
+    padding: 10px;
+    border-radius: 10px;
+
+    .right-side {
+
+        .status-bar {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 10px;
+            padding: 3px 0;
+            border-radius: 8px;
+
+            button {
+                border: none;
+                width: fit-content;
+                background-color: transparent;
+                border-radius: 8px;
+                padding: 8px 8px 7px;
+                background-color: #0000000d;
+                color: #0f0f0f;
+                cursor: pointer;
+            }
+
+            button.selected {
+                background-color: #0f0f0f;
+                color: white;
+            }
+        }
+    }
+
+    .left-side {
+        gap: 10px;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+
+        input[type="search"] {
+            height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #e1e1e1;
+            outline: none;
+            border-radius: 8px;
+            padding: 0 5px;
+            transition: all .5s;
+        }
+
+        input[type="search"]:focus {
+            border: 1px solid #aaa;
+        }
+
+        button.search-btn {
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e1e1e1;
+            color: #333;
+            background-color: white;
+            border-radius: 8px;
+            cursor: pointer;
+
+            svg {
+                height: 18px;
+                width: auto;
+            }
+        }
+    }
+
+    .date-filter {
+        height: 30px;
+
+        input[type="date"] {
+            height: 100%;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 0 3px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input[type="date"]:focus {
+            border: 1px solid #aaa;
+        }
+    }
+
+    .sort-select-box {
+        .label {
+            height: 30px;
+            padding: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+
+            svg {
+                height: 18px;
+                width: auto;
+            }
+        }
+
+        .sort-panel {
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+
+            .option {
+                display: flex;
+            }
+
+            button.confirm {
+                background-color: white;
+                border: none;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+.warning-wrapper {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        gap: 20px;
+        width: fit-content;
+
+        button {
+            border: 1px solid $gray-200;
+            height: 35px;
+            width: 70px;
+            border-radius: $border-rounded-1;
+            background-color: white;
+            transition: all .2s;
+            cursor: pointer;
+
+            &.confirm {
+                color: $red-500;
+            }
+
+            &.cancel {
+                color: $emerald-400;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.center-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        a {
+            color: #B0B435;
+            text-decoration: none;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        width: min(500px, 80vw);
+
+        input {
+            margin: 10px 0;
+            height: 30px;
+        }
+
+        input[type="email"] {
+            min-width: 300px;
+            outline: none;
+            border-width: 0 0 1px 0;
+            border-color: #ccc;
+        }
+
+        input[type="email"]:focus {
+            border-color: #b0b435;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            border: 1px solid #b0b435;
+            border-radius: 5px;
+            color: #b0b435;
+            background: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            color: white;
+            background-color: #b0b435;
+        }
+
+        span.invalid {
+            font-size: small;
+            min-width: 300px;
+            color: #ffc107;
+            transition: all 1s;
+        }
+    }
+}

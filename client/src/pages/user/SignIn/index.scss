@@ -1,0 +1,71 @@
+.sign-in-form {
+    margin: 0;
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        a {
+            color: #B0B435;
+            text-decoration: none;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        width: min(500px, 80vw);
+
+        input {
+            margin: 15px 0;
+            height: 30px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            min-width: 300px;
+            outline: none;
+            border-width: 0 0 1px 0;
+            border-color: #ccc;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #b0b435;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            border: 1px solid #b0b435;
+            border-radius: 5px;
+            color: #b0b435;
+            background: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            color: white;
+            background-color: #b0b435;
+        }
+
+        span.invalid {
+            font-size: small;
+            max-width: 300px;
+            color: #ffc107;
+            transition: all 1s;
+        }
+    }
+
+    .more-action {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #b0b435;
+        }
+    }
+}

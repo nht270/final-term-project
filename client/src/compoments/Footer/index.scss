@@ -1,0 +1,28 @@
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 30px 0;
+
+    .shop,
+    .about,
+    .social {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    h3 {
+        border-bottom: 2px dashed yellow;
+    }
+
+    .branch {
+        margin: 15px 0;
+
+        .branch-name {
+            font-weight: 500;
+        }
+    }
+
+    .social>svg {
+        margin: auto 5px;
+    }
+}

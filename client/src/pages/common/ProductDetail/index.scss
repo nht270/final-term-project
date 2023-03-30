@@ -1,0 +1,446 @@
+@import '../../../assets/scss/colors';
+@import '../../../assets/scss/variables';
+
+h2.title {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .main {
+        color: #777;
+    }
+
+    .slug {
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 739px) {
+    h2.title {
+        margin-left: 10px;
+    }
+}
+
+.previewer {
+    width: min(500px, 80%);
+    height: min(500px, 80%);
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+    .controls {
+
+        .next,
+        .previous,
+        .autoplay {
+            position: absolute;
+            color: white;
+            cursor: pointer;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+
+            svg {
+                transition: all 1s;
+            }
+        }
+
+        .next {
+            top: calc((100% - 28px)/2);
+            right: 10px;
+        }
+
+        .previous {
+            top: calc((100% - 28px)/2);
+            left: 10px;
+        }
+
+        .autoplay {
+            bottom: 10px;
+            left: 10px;
+            height: 20px;
+            width: 20px;
+
+            svg {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .next:hover,
+        .previous:hover,
+        .autoplay:hover {
+            scale: 1.1
+        }
+    }
+
+}
+
+.image-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-thumb {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        opacity: .5;
+        transition: all .5s;
+        cursor: pointer;
+
+        img {
+            border-radius: 2px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .image-thumb.selected {
+        opacity: 1;
+    }
+}
+
+.product-name {
+    font-size: 1.5rem;
+}
+
+.product-price {
+    font-weight: bold;
+    color: $main-color;
+    font-size: 1.1rem;
+}
+
+.product-size-wrapper {
+    display: flex;
+    width: fit-content;
+    height: 25px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 1px;
+    margin-top: 30px;
+
+    .product-size {
+        border: none;
+        height: 100%;
+        padding: 5px 10px;
+        color: $main-color;
+        margin-right: 5px;
+        border-radius: 2px;
+        background: white;
+        cursor: pointer;
+
+        &.selected {
+            color: white;
+            background-color: $main-color;
+        }
+    }
+
+}
+
+.product-description {
+    margin-top: 10px;
+}
+
+.product-quality {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    height: 30px;
+    width: 90px;
+    border: 1px solid #e8e8e8;
+    margin-top: 10px;
+    box-sizing: border-box;
+
+    input {
+        width: 35px;
+        height: calc(100% - 2px);
+        color: #5c5b5b;
+        border: none;
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .increase-control,
+    .decrease-control {
+        width: fit-content;
+        height: 100%;
+        padding: 0;
+        margin: 0 2px;
+        background-color: transparent;
+        border: none;
+        box-sizing: border-box;
+        transition: all .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 100%;
+            height: auto;
+            color: #969696;
+        }
+
+        svg:hover {
+            color: #5c5b5b;
+        }
+    }
+}
+
+button.addToCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 170px;
+    color: white;
+    background-color: $main-color;
+    border: none;
+    border-radius: 2px;
+    transition: all .2s;
+    margin-top: 10px;
+
+    span {
+        margin-left: 5px;
+    }
+}
+
+button.addToCart:hover {
+    background-color: black;
+}
+
+.product-rating {
+    margin-top: 50px;
+}
+
+.rating-wrapper {
+
+    .own-rating {
+        &__label {
+            font-size: 1.5rem;
+            padding: 15px;
+        }
+
+        svg {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .all-rating {
+
+        &__label {
+            font-size: 1.5rem;
+            padding: 15px;
+        }
+
+        &__no-rating {
+            box-sizing: border-box;
+            padding: 10px 15px;
+        }
+    }
+
+    button.more {
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        margin: 0;
+        color: $neutral-300;
+        border: none;
+        background-color: transparent;
+        transition: all .1s;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.1;
+            color: $neutral-500;
+        }
+    }
+
+    .more-menu {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        border: 1px solid #eee;
+        padding: 10px 0;
+        border-radius: 8px;
+
+        button {
+            background-color: white;
+            border: none;
+            border-radius: 0;
+            margin: 0;
+            padding: 5px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+
+    .rating-row {
+        margin: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, .125);
+        padding-bottom: 10px;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 20px 20px auto 30px;
+        gap: 10px;
+        justify-items: start;
+        grid-template-areas:
+            'avatar username'
+            'avatar start'
+            'avatar content'
+            'avatar ratingdate';
+
+        img.user-avatar {
+            grid-area: avatar;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50px;
+            border: 1px solid #e8e8e8;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+        div.user-name {
+            grid-area: username;
+            font-weight: bold;
+        }
+
+        div.star {
+            color: $yellow-400;
+
+            svg {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        div.content {
+            grid-area: content;
+            color: #666666;
+        }
+
+        div.rating-date {
+            grid-area: ratingdate;
+            color: #6c757d;
+            font-size: small;
+        }
+
+    }
+
+    button.btn {
+        background-color: white;
+        color: black;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 2px 16px 1px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    button.leave-rating {
+        height: 40px;
+        color: white;
+        background-color: $main-color;
+        border: none;
+        border-radius: 2px;
+        transition: all .2s;
+        margin: 0 15px 10px;
+        transition: all .2s;
+        box-sizing: border-box;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    button.leave-rating:hover {
+        background-color: black;
+    }
+
+    .rating-input {
+        padding: 15px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 20rem;
+
+        .star-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+
+            label {
+                color: $neutral-300;
+            }
+
+            input[type="radio"].star {
+                display: none;
+            }
+
+            input[type="radio"].star:checked~label {
+                color: $yellow-300;
+            }
+
+            input[type="radio"].star:hover~label {
+                color: $yellow-300;
+            }
+        }
+
+        textarea#rating-content {
+            resize: none;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            resize: none;
+            padding: 5px 10px;
+            height: 5rem;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            transition: all .2s;
+
+            &:focus {
+                border-color: #b0b435;
+            }
+        }
+    }
+}
+
+.product-detail-info>.star {
+    svg {
+        width: 16px;
+        height: auto;
+    }
+}
+
+@media (max-width: 739px) {
+
+    .product-detail-info,
+    .product-rating {
+        margin-left: 15px;
+    }
+}

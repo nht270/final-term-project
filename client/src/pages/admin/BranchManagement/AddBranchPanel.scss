@@ -1,0 +1,101 @@
+.add-branch-panel {
+    label {
+        font-size: large;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    input[type="text"],
+    input[type="time"] {
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+        max-width: 600px;
+    }
+
+    input[type="text"],
+    input[type="time"] {
+        height: 30px;
+    }
+
+    input[type="text"]:focus,
+    input[type="time"]:focus {
+        border-color: #B0B435;
+    }
+
+    .branch-name-wrapper,
+    .branch-phone-wrapper,
+    .branch-address-wrapper,
+    .branch-address-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-evenly;
+        height: 70px;
+    }
+
+    .branch-time-wrapper {
+        height: 70px;
+
+        input {
+            margin: 0 10px;
+        }
+    }
+
+    button.add,
+    a.back {
+        height: 35px;
+        background-color: white;
+        text-align: center;
+        padding: 5px 25px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        transition: all .2s;
+        margin: 20px 10px;
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    button.add {
+        color: #B0B435;
+    }
+
+    a.back {
+        color: #B0B4ff;
+    }
+
+    button.add:hover,
+    a.back:hover {
+        background-color: black;
+    }
+
+    .branch-address-wrapper {
+        position: relative;
+
+        .suggestion-address {
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 2px;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            box-shadow: 1px 1px 3px 1px #eee;
+
+            .location-item {
+                padding: 5px 10px;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            .location-item:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}
