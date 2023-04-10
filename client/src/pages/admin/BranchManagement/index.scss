@@ -1,0 +1,25 @@
+a.add-new {
+    background-color: white;
+    text-decoration: none;
+    color: #333;
+    height: 24px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2px 5px;
+    font-weight: 600;
+    font-size: small;
+    box-sizing: content-box;
+    cursor: pointer;
+
+    svg {
+        margin: -4px;
+    }
+}
+
+a.add-new:hover {
+    background-color: #eee;
+}

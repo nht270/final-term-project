@@ -1,0 +1,26 @@
+.popup {
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    padding: 10px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    translate: -50% -50%;
+    animation: show-out .7s;
+
+    .close-btn {
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        color: #B0B435;
+        top: 3px;
+        right: 3px;
+        cursor: pointer;
+    }
+
+    .close-btn:hover {
+        color: #111;
+    }
+}

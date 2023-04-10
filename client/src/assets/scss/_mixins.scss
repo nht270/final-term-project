@@ -1,0 +1,9 @@
+@import 'variables';
+
+@mixin brand-logo {
+    height: 32px;
+    color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

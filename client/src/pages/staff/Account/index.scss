@@ -1,0 +1,172 @@
+form[name="staff-information"] {
+    margin-top: 20px;
+    border-radius: 2px;
+
+    .field-wrapper {
+
+        border: 1px solid #ddd;
+        max-width: 700px;
+
+        .field {
+            padding: 10px;
+            display: grid;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 30px 30px auto;
+            grid-template-areas:
+                'label'
+                'input'
+                'valid';
+
+            label {
+                grid-area: label;
+                min-width: 70px;
+            }
+
+            input,
+            select {
+                height: 30px;
+                outline: none;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+                transition: all 1s;
+                flex-grow: 1;
+                padding: 0;
+            }
+
+            input[name="address"] {
+                width: 100%;
+            }
+
+            select,
+            input[type="date"] {
+                width: fit-content;
+                min-width: 50px;
+                border: none;
+            }
+
+            input:focus {
+                border-bottom-color: #b0b435;
+            }
+        }
+    }
+
+    div.avatar {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        margin: 20px 0;
+
+        input[type="file"] {
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+            width: 0.1px;
+            height: 0.1px;
+        }
+
+        input[type="file"]+label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            cursor: pointer;
+            border-radius: 50px;
+            color: #ccc;
+            border: 1px solid #ddd;
+            position: relative;
+
+            .avatar-picker {
+                width: 94px;
+                height: 94px;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+
+                img {
+                    width: 94px;
+                    height: 94px;
+                    object-fit: cover;
+                    border-radius: 50px;
+                }
+
+                .change-pic-icon {
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    color: white;
+                    position: absolute;
+                    height: 24px;
+                    width: 24px;
+                    bottom: 2px;
+                    right: 2px;
+                    background-color: #00cae0;
+
+                    svg {
+                        height: 16px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        input[type="file"]+label:hover {
+            color: #aaa;
+            border-color: #aaa;
+        }
+
+    }
+
+    button.update-btn {
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+        color: #b0b435;
+        cursor: pointer;
+    }
+
+    button.update-btn:hover {
+        background-color: #b0b43520;
+    }
+
+    span.invalid {
+        font-size: small;
+        color: #ffc107;
+        transition: all 1s;
+        width: 100%;
+    }
+}
+
+a.update-password {
+    text-decoration: none;
+    background-color: white;
+    text-transform: uppercase;
+    color: #3f51b5;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    form[name="staff-information"] {
+        .field-wrapper {
+            .field {
+                display: grid;
+                grid-template-columns: minmax(70px, 30%) 1fr;
+                grid-template-rows: 30px auto;
+                grid-template-areas:
+                    'label input'
+                    'label valid';
+            }
+        }
+    }
+}

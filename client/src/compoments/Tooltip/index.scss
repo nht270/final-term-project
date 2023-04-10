@@ -1,0 +1,26 @@
+.tooltip {
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    color: black;
+    filter: drop-shadow(0 0 10px #bdbdbd59);
+
+    .content {
+        max-width: 500px;
+        min-width: 300px;
+        width: fit-content;
+        overflow: hidden;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background-color: white;
+    }
+
+    .arrow {
+        border-width: 6px;
+        border-style: solid;
+        margin-left: calc(50% - 6px);
+        width: 0;
+        border-color: transparent transparent white transparent;
+    }
+}

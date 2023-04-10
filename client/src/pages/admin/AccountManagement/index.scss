@@ -1,0 +1,34 @@
+.account-managment {
+    form {
+        margin: 20px 0;
+        width: fit-content;
+    }
+}
+
+button.change-password {
+    background-color: white;
+    text-decoration: none;
+    color: #333;
+    height: 24px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2px 5px;
+    font-weight: 600;
+    font-size: small;
+    box-sizing: content-box;
+    cursor: pointer;
+
+    svg {
+        margin: 0 4px;
+        height: 18px;
+        width: auto;
+    }
+}
+
+button.change-password:hover {
+    background-color: #eee;
+}

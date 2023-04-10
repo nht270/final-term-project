@@ -1,0 +1,55 @@
+@import '../../../assets/scss/misc';
+@import '../../../assets/scss/colors';
+@import '../../../assets/scss/variables';
+
+.branch-column {
+    position: relative;
+
+    select {
+        height: 30px;
+        padding: 5px;
+        border: 1px solid $gray-200;
+        border-radius: $border-rounded-1;
+        background-color: transparent;
+        box-sizing: border-box;
+        outline: none;
+
+        &:focus {
+            border-color: $main-color;
+        }
+    }
+
+}
+
+.warning-wrapper {
+    min-height: 100px;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        padding: 20px 15px;
+        flex-grow: 1;
+    }
+
+    hr {
+        width: 100%;
+        background-color: #dbdbdb;
+        border: 0;
+        height: 1px;
+        margin: 0;
+    }
+
+    button.ok {
+        border: none;
+        background-color: white;
+        padding: 12px 0;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0 0 12px 12px;
+        color: $red-500;
+        cursor: pointer;
+    }
+}

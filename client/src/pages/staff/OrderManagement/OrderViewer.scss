@@ -1,0 +1,39 @@
+.order-table {
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    .order-table-header {
+        div {
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            padding: 3px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    ul.order-list {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        gap: 10px;
+
+        li {
+            list-style-type: none;
+            margin: 15px 0;
+
+            div {
+                padding: 0 3px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-wrap: nowrap;
+                white-space: nowrap;
+                height: 50px;
+            }
+        }
+    }
+}

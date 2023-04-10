@@ -1,0 +1,108 @@
+.category-sector {
+
+    form {
+
+        input[type="text"],
+        input[type="submit"] {
+            border: 1px solid #f2f2f2;
+            padding: 5px;
+            outline: none;
+            border-radius: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: white;
+            cursor: pointer;
+        }
+
+        input[type="text"]:focus,
+        input[type="submit"]:hover {
+            border-color: #ddd;
+        }
+    }
+
+    .category-viewer {
+        border: 1px solid #ddd;
+        max-width: 500px;
+        border-radius: 5px;
+        padding: 10px;
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 15px 0;
+            }
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            padding: 0;
+            margin: 0;
+            height: 24px;
+            width: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            svg {
+                height: 18px;
+                width: auto;
+            }
+        }
+
+        button:hover {
+            color: #777;
+        }
+
+        input[type="text"] {
+            outline: none;
+            border: 1px solid transparent;
+            border-bottom-color: #f2f2f2;
+            padding: 0;
+        }
+
+        input[type="text"]:focus {
+            border-bottom-color: #ddd;
+        }
+
+        input[type="text"]:disabled {
+            background-color: white;
+            color: black;
+            border-color: transparent;
+        }
+    }
+
+    .delete-category-alert {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 2px 20px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #eee;
+        }
+
+        button.delete {
+            color: #e53e3e;
+            border-color: #e53e3e;
+        }
+
+        button.cancel {
+            color: #5a67d8;
+            border-color: #5a67d8;
+        }
+    }
+}

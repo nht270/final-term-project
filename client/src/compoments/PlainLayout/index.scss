@@ -1,0 +1,27 @@
+.plain-header {
+    display: flex;
+    justify-content: flex-start;
+
+    .back-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .plain-header .back-btn {
+        display: flex;
+        height: 30px;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        width: fit-content;
+        margin-left: 10px;
+        margin-top: 5px;
+        cursor: pointer;
+
+        span,
+        svg {
+            margin: 0 2px;
+        }
+    }
+}

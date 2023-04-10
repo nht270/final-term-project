@@ -1,0 +1,60 @@
+@import '../../../assets/scss/colors';
+@import '../../../assets/scss/misc';
+
+
+.order-information {
+    .information-field {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+
+        span {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+
+ul.order-products {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        display: grid;
+        grid-template-columns: 80px auto;
+        margin: 10px 0;
+
+        img {
+            border-radius: 8px;
+        }
+    }
+}
+
+form#cancel-order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input[type="text"] {
+        height: 30px;
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+        max-width: 600px;
+
+        &:focus {
+            border-color: $neutral-400;
+        }
+    }
+
+    input[type="submit"] {
+        @extend %nonBorderButton;
+        color: $red-500;
+        cursor: pointer;
+    }
+}

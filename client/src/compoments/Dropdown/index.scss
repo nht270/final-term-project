@@ -1,0 +1,19 @@
+.dropdown {
+    width: fit-content;
+    position: relative;
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        svg {
+            height: 0.7em;
+        }
+    }
+
+    div.dropdown-menu {
+        animation: show-out .5s;
+    }
+}

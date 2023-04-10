@@ -1,0 +1,9 @@
+@import '../../assets/scss/colors';
+
+.star-range {
+    color: $neutral-300;
+
+    .star-range__light {
+        color: $yellow-300;
+    }
+}

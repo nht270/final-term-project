@@ -1,0 +1,216 @@
+.sign-up-form {
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        a {
+            color: #B0B435;
+            text-decoration: none;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min(400px, 80vw);
+        margin: auto;
+        animation: show-out .5s;
+
+        input,
+        div.gender,
+        div.date-of-birth {
+            margin: 15px auto;
+            height: 30px;
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="email"] {
+            outline: none;
+            border-width: 0 0 1px 0;
+            border-color: #eee;
+            min-width: 300px;
+        }
+
+        div.avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+
+            input[type="file"] {
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+                width: 0.1px;
+                height: 0.1px;
+            }
+
+            input[type="file"]+label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 90px;
+                height: 90px;
+                box-sizing: border-box;
+                cursor: pointer;
+                border-radius: 50px;
+                color: #ccc;
+                overflow: hidden;
+                border: 2px dashed #ccc;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                }
+            }
+
+            input[type="file"]+label:hover {
+                color: #aaa;
+                border-color: #aaa;
+            }
+        }
+
+
+        div.avatar-preview img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+
+        div.gender>select {
+            padding: 5px 10px;
+            box-sizing: border-box;
+            border-width: 0 0 1px 0;
+            border-color: #eee;
+        }
+
+        div.date-of-birth>input[type="date"] {
+            width: fit-content;
+            margin: 0;
+            border: 1px solid #eee;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        div.gender>select:focus,
+        div.date-of-birth>input[type="date"]:focus {
+            border-color: #b0b435;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            border: 1px solid #b0b435;
+            border-radius: 5px;
+            color: #b0b435;
+            background: white;
+            cursor: pointer;
+        }
+
+        div.captcha {
+            margin: 40px auto;
+            height: 50px;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        span.invalid {
+            font-size: small;
+            min-width: 300px;
+            color: #ffc107;
+            align-self: flex-start;
+            transition: all 1s;
+        }
+
+        .address-wrapper {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    .suggestion-address {
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 1px 1px 3px 1px #eee;
+
+        .location-item {
+            padding: 5px 10px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .location-item:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+
+.multi-step-form {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    width: fit-content;
+    margin: 0 auto;
+
+    .step-count {
+        text-align: right;
+        color: #bbb;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        button.btn {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: #B0B435;
+        }
+
+        .btn.center {
+            margin: 0 auto;
+        }
+
+        .next-btn,
+        .finish-btn {
+            margin-right: 15px;
+        }
+
+        .back-btn {
+            margin-left: 15px;
+        }
+    }
+}
+
+.more-action {
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: #b0b435;
+    }
+}

@@ -1,0 +1,55 @@
+.statis-bar {
+    display: flex;
+    margin: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    input,
+    select {
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+        transition: all .2s;
+
+        &:focus {
+            border-color: #B0B435;
+        }
+    }
+
+    input[type="submit"] {
+        color: #333;
+        cursor: pointer;
+    }
+
+    .field-wrapper>* {
+        margin: 0 5px;
+    }
+}
+
+.statis-result {
+    margin: 15px;
+    overflow: auto;
+
+    table {
+        width: 100%;
+        border: 1px solid #f1f1f1;
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        tr {
+
+            th,
+            td {
+                padding: 5px;
+                width: max-content;
+                text-align: left;
+            }
+
+            th {
+                white-space: nowrap;
+            }
+        }
+    }
+}

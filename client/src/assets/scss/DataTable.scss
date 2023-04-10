@@ -1,0 +1,119 @@
+@import 'colors';
+@import 'variables';
+@import 'misc';
+
+.data-table-wrapper {
+    border: 1px solid $neutral-200;
+    border-radius: $border-rounded-2;
+    overflow-x: auto;
+    overflow-y: visible;
+
+    .data-table {
+        width: 100%;
+        box-sizing: border-box;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                font-weight: bold;
+
+                th {
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    text-align: left;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                transition: all .2s;
+                cursor: pointer;
+
+                td {
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    text-align: left;
+
+                    .image {
+                        $image-size-fraction: 6rem;
+                        object-fit: cover;
+                        border-radius: $border-rounded-0;
+
+                        &--quare {
+                            width: $image-size-fraction;
+                            height: $image-size-fraction;
+                        }
+
+                        &--wide {
+                            width: calc(2 * $image-size-fraction);
+                            height: $image-size-fraction;
+                        }
+
+                    }
+
+                    .shorten {
+                        max-height: 6rem;
+                        max-width: 10rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    button.more {
+                        @extend %nonBorderButton;
+                        visibility: hidden;
+                        transition: all .2s;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $blue-500;
+                    }
+
+                    .more-menu {
+                        background-color: white;
+                        display: flex;
+                        flex-direction: column;
+                        border-radius: $border-rounded-2;
+                        padding: 10px 8px;
+                        align-items: flex-start;
+                        border: 1px solid $gray-200;
+
+                        a {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            padding: 5px;
+                            text-decoration: none;
+                            color: black;
+                            border-radius: $border-rounded-1;
+                            box-sizing: border-box;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $neutral-200;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: $neutral-300;
+
+                    button.more {
+                        visibility: visible;
+                    }
+                }
+
+                &.non-highlight:hover {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

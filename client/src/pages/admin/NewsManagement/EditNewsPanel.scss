@@ -1,0 +1,143 @@
+.edit-news-panel {
+    label {
+        font-size: large;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+        max-width: 600px;
+        height: 30px;
+    }
+
+    input[type="text"]:focus {
+        border-color: #B0B435;
+    }
+
+    .news-title-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-evenly;
+        height: 70px;
+    }
+
+    .cover-image-picker {
+        border: 1px dashed #B0B435;
+        border-radius: 8px;
+        min-width: 200px;
+        min-height: 200px;
+        cursor: pointer;
+
+        input.image-file-input {
+            display: none;
+        }
+
+        label.image-file-label {
+            height: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+            font-weight: normal;
+            text-transform: none;
+            cursor: pointer;
+
+            .describe-text {
+                text-align: center;
+
+                span {
+                    color: #B0B435;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    img.cover {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    button.update,
+    a.back,
+    a.delete {
+        height: 35px;
+        box-sizing: border-box;
+        background-color: white;
+        text-align: center;
+        padding: 5px 25px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        transition: all .2s;
+        margin: 20px 10px;
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 3px;
+    }
+
+    button.update {
+        color: #B0B435;
+    }
+
+    a.back {
+        color: #B0B4ff;
+    }
+
+    button.update:hover,
+    a.back:hover {
+        background-color: black;
+    }
+
+    a.delete:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.warning-wrapper {
+    min-height: 100px;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        padding: 20px 15px;
+        flex-grow: 1;
+    }
+
+    hr {
+        width: 100%;
+        background-color: #dbdbdb;
+        border: 0;
+        height: 1px;
+        margin: 0;
+    }
+
+    button.ok {
+        border: none;
+        background-color: white;
+        padding: 12px 0;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0 0 12px 12px;
+        color: #e53e3e;
+        cursor: pointer;
+    }
+}

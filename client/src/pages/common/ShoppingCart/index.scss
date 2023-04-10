@@ -1,0 +1,99 @@
+.shopping-cart {
+    padding: 10px;
+
+    h2 {
+        margin: 20px 0 10px;
+    }
+
+    .cart-wrapper {
+
+        .choice-all {
+            border: none;
+            color: #B0B435;
+            opacity: .8;
+            background-color: white;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .choice-all:hover {
+            opacity: 1;
+        }
+
+        .item-row {
+
+            display: flex;
+            align-items: center;
+
+            .choice-item>label>input {
+                display: flex;
+                place-content: center;
+                -webkit-appearance: none;
+                background-color: #dee2e6;
+                margin: 0;
+                height: 1rem;
+                width: 1rem;
+                border-radius: 3px;
+            }
+
+            .choice-item>label>input::before {
+                content: "";
+                width: .1rem;
+                height: .25rem;
+                border-color: white;
+                border-width: 0 3px 3px 0;
+                border-style: solid;
+                translate: 0 .2rem;
+                rotate: 45deg;
+                opacity: 0;
+            }
+
+            .choice-item>label>input:checked {
+                background-color: #b0b435;
+            }
+
+            .choice-item>label>input:checked::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    .total-price {
+        font-size: large;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .view-detail,
+        .go-back {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            padding: 2px 5px;
+            border-radius: 2px;
+            color: white;
+            transition: all .2s;
+        }
+
+        .view-detail {
+            color: #B0B435;
+        }
+
+        .go-back {
+            color: #B0B4ff;
+        }
+
+        .view-detail:hover,
+        .go-back:hover {
+            background-color: black;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
