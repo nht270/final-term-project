@@ -1,5 +1,5 @@
-coffee-shop-sever/dist
-coffee-shop-sever/node_modules
-coffee-shop-client/node_modules
-coffee-shop-sever/.env
-coffee-shop-client/.env
+server/dist
+server/node_modules
+client/node_modules
+server/.env
+client/.env
