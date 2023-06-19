@@ -2,7 +2,7 @@ import { Cloudinary } from '@cloudinary/url-gen'
 import { limitFit, thumbnail } from '@cloudinary/url-gen/actions/resize'
 import { formDataRequest, SERVER_ORIGIN } from './general'
 
-const CLOUD_NAME_CLOUDINARY = 'drlg6q51y'
+const CLOUD_NAME_CLOUDINARY = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME || ''
 const IMAGE_UPLOAD_ENDPOINT = SERVER_ORIGIN + '/image/upload'
 
 export const cloudinary = new Cloudinary({ cloud: { cloudName: CLOUD_NAME_CLOUDINARY } })
